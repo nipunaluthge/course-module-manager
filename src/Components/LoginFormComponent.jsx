@@ -2,7 +2,7 @@ import React from 'react';
 
 const LoginFormComponent = () => {
   return (
-    <div>
+    <div className="login-form-component">
       <div className="login-heading">Login</div>
       <div className="password-login-section">
         <form action="" className="loging-form">
