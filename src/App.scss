@@ -1,3 +1,9 @@
+$base-colour: #57b846;
+
+:export {
+  base-colour: $base-colour;
+}
+
 .App {
   text-align: center;
 }
