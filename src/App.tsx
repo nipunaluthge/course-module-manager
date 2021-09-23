@@ -1,13 +1,23 @@
-import './App.css';
+import { useEffect } from 'react';
+import './App.scss';
+import firebaseApp from './Constants/firebase';
 import HomePageContainer from './Containers/HomePageContainer';
-import LoginFormComponent from './Components/LoginFormComponent';
+import LoginPageContainer from './Containers/LoginPageContainer';
+//import LoginFormComponent from './Components/LoginFormComponent';
 
 function App() {
+
+  useEffect(() => {
+    let firebaseapp: any = firebaseApp;
+    return () => {
+      firebaseapp = null;
+    }
+  }, [])
+
   return (
     <div className="App">
       <HomePageContainer />
-      <h1>dsfsdfs</h1>
-      <LoginFormComponent />
+      <LoginPageContainer />
     </div>
   );
 }
